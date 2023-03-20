@@ -1,0 +1,51 @@
+server:
+  port: 80
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/together?serverTimezone=UTC
+    username: root
+    password: green1234
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update # create, update, none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2MB
+
+  security:
+    user:
+      name: root
+      password: green1234
+
+#    oauth2:
+#      client:
+#        registration:
+#          facebook:
+#            client-id: 315293796826930
+#            client-secret: 487af9479023b8c0e58f913b411327cf
+#            scope:
+#              - public_profile
+#              - email
+
+
+file:
+  path: C:/together/springbootwork/upload/
